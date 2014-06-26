@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.artassist"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+
+        <uses-permission
+     android:name="com.google.android.glass.permission.DEVELOPMENT" />
+        <permission android:name="android.permission.INTERNET"></permission>
+        <permission android:name="android.permission.ACCESS_NETWORK_STATE"></permission>
+        <permission android:name="android.permission.CAMERA"></permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_pen_50"
+        android:label="@string/app_name" >
+        <activity
+            android:name="com.example.artassist.ArtAssistActivity"
+            android:label="@string/app_name" android:immersive="true" android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <data android:scheme="http" android:host="www.art-assist.com"/>
+                <category android:name="android.intent.category.BROWSABLE" />
+                    
+            </intent-filter>
+
+            <meta-data
+                android:name="com.google.android.glass.VoiceTrigger"
+                android:resource="@xml/voice_trigger_help_me_draw" />
+        </activity>
+        <activity
+            android:name="com.example.artassist.MainActivity"
+            android:label="@string/title_activity_art_assist" >
+            
+        </activity>
+        <activity
+            android:name="com.example.artassist.AboutActivity"
+            android:label="@string/title_activity_about" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.artassist.AboutActivity" >
+
+    <item
+        android:id="@+id/visit_website"
+        android:title="@string/visit_best_website_ever" 
+        android:titleCondensed="@string/Website" 
+        android:icon="@drawable/ic_world_50" />
+        
+
+</menu>
